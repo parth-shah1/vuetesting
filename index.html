@@ -6,14 +6,18 @@
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-
+  var count = 0
   gtag('config', 'G-VBW5ED4HQT');
   function dem(){
+    count++;
    gtag('event', 'gtest');
    gtag('event', 'gtest2', {
   'app_name': 'myAppName',
   'screen_name': 'Home'
 });
+   gtag('event', 'counter', {
+    'count': count   
+   })
    alert("hi");
   }
   
