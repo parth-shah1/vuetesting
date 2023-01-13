@@ -15,7 +15,13 @@
    console.log(event.target.innerText)
   console.log(event.target.tagName)
   console.log(window.location.href)
-  document.getElementById("demo").innerHTML = "Hello World";
+   console.log(event.target.id)
+  gtag('event' , 'ButtonClick' , {
+    'ButtonName' : event.target.innerText,
+    'Route' : window.location.href,
+    'TagName' : event.target.tagName,
+    'Id' : event.target.id
+  });
  }
      if(event.target.className == "galink"){
   console.log(event.target.className)
@@ -23,7 +29,12 @@
    console.log(event.target.innerText)
   console.log(event.target.tagName)
   console.log(window.location.href)
-  document.getElementById("demo").innerHTML = "Hello World";
+   gtag('event' , 'LinkClick' , {
+    'LinkName' : event.target.innerText,
+    'Route' : window.location.href,
+    'TagName' : event.target.tagName,
+     'Id' : event.target.id,
+  });
  }
 }
   
