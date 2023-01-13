@@ -6,20 +6,26 @@
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-  var count = 0
   gtag('config', 'G-VBW5ED4HQT');
-  function dem(){
-    count++;
-   gtag('event', 'gtest');
-   gtag('event', 'gtest2', {
-  'app_name': 'myAppName',
-  'screen_name': 'Home'
-});
-   gtag('event', 'counter', {
-    'count': count   
-   })
-   alert("hi");
-  }
+  document.addEventListener("click", (event) => myFunction(event));
+  function myFunction(event) {
+ if(event.target.className == "gabtn"){
+  console.log(event.target.className)
+   console.log(event.target.innerHTML)
+   console.log(event.target.innerText)
+  console.log(event.target.tagName)
+  console.log(window.location.href)
+  document.getElementById("demo").innerHTML = "Hello World";
+ }
+     if(event.target.className == "galink"){
+  console.log(event.target.className)
+   console.log(event.target.innerHTML)
+   console.log(event.target.innerText)
+  console.log(event.target.tagName)
+  console.log(window.location.href)
+  document.getElementById("demo").innerHTML = "Hello World";
+ }
+}
   
 </script>
     <title>demotest
@@ -27,6 +33,9 @@
 </head>
 <body>
 
-    <button onClick="dem()">click me</button>
+    <button class="gabtn" id="btn1">click me1</button>
+  <button class="gabtn" id="btn2">click me2</button>
+  <a class="galink" id="link1" href="link1.com">link1</a>
+  <a class="galink" id="link2" href="link2.com">link2</a>
 </body>
 </html>   
